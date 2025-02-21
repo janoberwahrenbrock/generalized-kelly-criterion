@@ -8,20 +8,19 @@ This project implements the **Generalized Kelly Criterion**, extending the class
 
 The **Kelly Criterion** determines the optimal position size per round to maximize the long-term growth rate of capital. Instead of focusing on expected value, it considers logarithmic utility, ensuring that the capital grows at the highest possible compounded rate over multiple rounds.
 
-For **binary outcome games** (e.g., betting on a biased coin flip), the Kelly fraction \( f^* \) is given by:
+For **binary outcome games** (e.g., betting on a biased coin flip), the optimal Kelly fraction f* is given by:
 
-\[
-f^* = \frac{P}{A} - \frac{Q}{B}
-\]
+f* = (P / B) - (Q / A)
 
 where:
 
-- \( P \) is the probability of winning,
-- \( Q = 1 - P \) is the probability of losing,
-- \( A \) is the return multiplier for a win (i.e., for every unit bet, you receive \( A \) additional units if you win),
-- \( B \) is the loss multiplier (i.e., for every unit bet, you lose \( B \) units if you lose).
+- **P** is the probability of winning,  
+- **Q = 1 - P** is the probability of losing,  
+- **A** is the return multiplier for a win (i.e., for every unit bet, you receive **A** additional units if you win),  
+- **B** is the loss multiplier (i.e., for every unit bet, you lose **B** units if you lose).  
 
-However, real-world problems are often more complex than simple binary bets. The **Generalized Kelly Criterion** extends this formula to handle cases where outcomes belong to a set of discrete possibilities or a continuous range.
+
+However, real-world problems are more complex than simple binary bets. The **Generalized Kelly Criterion** extends this formula to handle cases where outcomes belong to a set of discrete possibilities or a continuous range.
 
 To understand the mathematical derivation and the notations used in this project, it is strongly recommended to read **"Derivation and Application of the Generalized Kelly Criterion"** (provided in this repository).
 
@@ -35,7 +34,7 @@ To understand the mathematical derivation and the notations used in this project
 - **`examples.py`**  
   Provides example applications of the Generalized Kelly Criterion, including:  
   - A manipulated coin toss game (discrete outcomes).  
-  - A Gaussian-distributed return model (continuous outcomes).
+  - A Gaussian-distributed outcome model with a nonlinear return function (continuous outcomes).
 
 - **`requirements.txt`**  
   Contains all necessary dependencies for running the implementation.
